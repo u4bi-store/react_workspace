@@ -4,7 +4,13 @@ class App extends React.Component { // class 개념 역시 ES6 에 새로 도입
                                     // 모든 Component는 React.Component 를 상속
     
     render(){ // render() 메소드에서는 컴포넌트에 렌더링 될 데이타를 정의
- 
+        let text = "u4bi"; // let키워드는 var 과 비슷하지만 var 변수의 scope는 기본적으로 함수 단위인데
+                           // let은 블럭 범위 내에서 변수를 선언함
+
+                           // 따라서 가끔 발생하는 javascript 의 Scope관련 문제를 해결 할 수 있음
+
+                           // let을 사용하는것이 필수는 아니지만, ES6 에선 평상시 let 을 쓰고 var은 필요한 상황에서만 사용
+
         return ( // 이 부분이 JSX의 가장 중요한 부분입니다.
                  // 자바스크립트에서 html 태그를 반환
                  // 따옴표같은건 없다.
@@ -12,13 +18,17 @@ class App extends React.Component { // class 개념 역시 ES6 에 새로 도입
                  // ” ” 로 감싸지 않는 점 주의
                 <div>
                     <h1> Hello U4bi </h1>
-                    <h2> Welcome </h2>
+                    <h2> Welcome {text} </h2>
                 </div>
                 // 여러 Element 를 렌더링 해야 할 때,
                 // 그 element들을 필수적으로 container element 안에
                 // 포함시켜줘야 함
                 
                 // 즉  div element 를 wrapper 로 사용하면 됨
+
+                // JSX 안에서, JavaScript 표현을 사용하는 방법은
+                // 매우 간단
+                // 그냥 { } 로 wrapping 하면 됨
         );
         
         // 이전에는 개발자들이 .jsx 확장자를 사용하였지만
