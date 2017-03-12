@@ -33,6 +33,10 @@ class App extends React.Component { // class 개념 역시 ES6 에 새로 도입
                     <button onClick={this.say}>click</button>
                     <p style = {pStyle} >{1 == 1 ? 'True' : 'False'}</p>
                     { /* 주석 쓰는법 */ }
+                    
+                    { /* nested Element에서 나왔던 것 처럼
+                         container element 안에 주석이 작성
+                    */}
                 </div>
                 // pStyle 이 p element 에 적용
 
