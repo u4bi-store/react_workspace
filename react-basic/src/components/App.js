@@ -46,8 +46,13 @@ class App extends React.Component {
 
 App.defaultProps = {
     headerTitle: 'u4bi not header title',
-    contentTitle: 'u4bi not content title',
-    contentBody: 'u4bi not content body'
+    contentTitle: 12,
+    contentBody: undefined
 };
+
+/* 이제 App컴포넌트에서 잘못된 값을 줘보기
+    contentTitle에는 숫자 지정
+    contentBody에는  빈값 지정
+*/
 
 export default App;

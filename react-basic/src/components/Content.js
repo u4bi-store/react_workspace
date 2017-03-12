@@ -13,4 +13,14 @@ class Content extends React.Component {
     }
 }
  
+
+Content.propTypes = {
+    title: React.PropTypes.string,
+    body: React.PropTypes.string.isRequired
+};
+
+/* 두 props 의 Type 를 모두 string 을 지정
+   body는 .isRequired 를 추가하여 필수 props로 설정
+*/
+
 export default Content;

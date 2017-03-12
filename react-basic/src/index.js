@@ -5,7 +5,8 @@ import App from './components/App';
 const rootElement = document.getElementById('root');
 ReactDOM.render(<App headerTitle = "u4bi header title"
                      //contentTitle = "u4bi content title"
-                     contentBody = "u4bi content body"/>, rootElement);
+                     //contentBody = "u4bi content body"
+                     />, rootElement);
 
 // App 컴포넌트를 불러와서 root element
 
