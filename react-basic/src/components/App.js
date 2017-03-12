@@ -8,8 +8,25 @@ class App extends React.Component {
             <div>  {/* <Header/> 와 <Content/> 는 만들 컴포넌트
                        한 파일엔 여러개의 컴포넌트가 존재가능
                     */}
-                <Header/>
-                <Content/>
+                <Header  title={ this.props.headerTitle } />
+                <Content title={ this.props.contentTitle }
+                         body={ this.props.contentBody }/>
+                         { /*
+                            App 컴포넌트에서 사용되는 props 값을
+                            child 컴포넌트들로 전달할꺼임.
+
+                            index.js에서 넘어온 headerTitle을
+                            해더에 title이란 프로퍼티로 정의하여 넘김
+
+                            아래도 마찬가지
+                            
+                            콘텐츠에는
+                                index.js에서 넘어온 두 프로퍼티를
+
+                                title이란 프로퍼티로 정의해서 넘기고
+                                하나는 body라는 프로퍼티로 정의해서 넘김
+
+                         */}
             </div>
         );
     }
