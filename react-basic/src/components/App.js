@@ -14,6 +14,12 @@ class App extends React.Component { // class 개념 역시 ES6 에 새로 도입
                            // 따라서 가끔 발생하는 javascript 의 Scope관련 문제를 해결 할 수 있음
 
                            // let을 사용하는것이 필수는 아니지만, ES6 에선 평상시 let 을 쓰고 var은 필요한 상황에서만 사용
+        let pStyle = {
+            color: 'aqua',
+            backgroundColor: 'black'
+        }; // Inline Style 에서는, string 형식이
+           // 사용되지 않고
+           // key 가 camelCase 인 Object 가 사용
 
         return ( // 이 부분이 JSX의 가장 중요한 부분입니다.
                  // 자바스크립트에서 html 태그를 반환
@@ -25,8 +31,10 @@ class App extends React.Component { // class 개념 역시 ES6 에 새로 도입
                     <h2> Welcome {text} </h2>
 
                     <button onClick={this.say}>click</button>
-                    <p>{1 == 1 ? 'True' : 'False'}</p>
+                    <p style = {pStyle} >{1 == 1 ? 'True' : 'False'}</p>
                 </div>
+                // pStyle 이 p element 에 적용
+                
                 // If-Else 문 사용 불가
                 // JSX 안에서 사용되는 JavaScript 표현에는
                 // If-Else 문이 사용 불가
