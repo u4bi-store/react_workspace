@@ -6,6 +6,7 @@ import RandomNumber from './RandomNumber'; /* RandomNumber.js를 import함 */
 /* 이제 parent 컴포넌트인 App 컴포넌트에서
    RandomNumber 컴포넌트를 사용해보기
 */
+import Contacts from './Contacts';
 
 class App extends React.Component {
 
@@ -57,6 +58,7 @@ class App extends React.Component {
                 <StateExample/>
                 <RandomNumber number={this.state.value}
                               onUpdate={this.updateValue} />
+                <Contacts/>
                 { /* RandomNumber 컴포넌트를 사용함
                      onUpdate
                 */}
