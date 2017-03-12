@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Content from './Content';
+import StateExample from './StateExample';
 
 class App extends React.Component {
     render(){
@@ -27,6 +28,7 @@ class App extends React.Component {
                                 하나는 body라는 프로퍼티로 정의해서 넘김
 
                          */}
+                <StateExample/>
             </div>
         );
     }
