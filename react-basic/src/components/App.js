@@ -3,6 +3,10 @@ import React from 'react'; //  require('..') 의 역할
 class App extends React.Component { // class 개념 역시 ES6 에 새로 도입된 요소
                                     // 모든 Component는 React.Component 를 상속
     
+    say(){
+       alert("u4bi");
+    }
+
     render(){ // render() 메소드에서는 컴포넌트에 렌더링 될 데이타를 정의
         let text = "u4bi"; // let키워드는 var 과 비슷하지만 var 변수의 scope는 기본적으로 함수 단위인데
                            // let은 블럭 범위 내에서 변수를 선언함
@@ -19,7 +23,16 @@ class App extends React.Component { // class 개념 역시 ES6 에 새로 도입
                 <div>
                     <h1> Hello U4bi </h1>
                     <h2> Welcome {text} </h2>
+
+                    <button onClick={this.say}>click</button>
                 </div>
+                // {this.say} 를 통해 버튼이 클릭되면
+                // 해당 메소드가 실행
+
+                // () 가 뒤에 안붙어있다는점을 주의
+                // 만약에 () 가 붙으면 페이지가 로드 될때도 실행되고
+                // 클릭할때도 실행 됨.
+
                 // 여러 Element 를 렌더링 해야 할 때,
                 // 그 element들을 필수적으로 container element 안에
                 // 포함시켜줘야 함
