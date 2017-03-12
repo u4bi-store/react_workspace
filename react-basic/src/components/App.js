@@ -25,7 +25,17 @@ class App extends React.Component { // class 개념 역시 ES6 에 새로 도입
                     <h2> Welcome {text} </h2>
 
                     <button onClick={this.say}>click</button>
+                    <p>{1 == 1 ? 'True' : 'False'}</p>
                 </div>
+                // If-Else 문 사용 불가
+                // JSX 안에서 사용되는 JavaScript 표현에는
+                // If-Else 문이 사용 불가
+                // 이에 대한 대안은
+                // ternary ( condition ? true : false )
+                // 표현을 사용함
+                
+                // 예:  <p>{1 == 1 ? 'True' : 'False'}</p>
+
                 // {this.say} 를 통해 버튼이 클릭되면
                 // 해당 메소드가 실행
 
