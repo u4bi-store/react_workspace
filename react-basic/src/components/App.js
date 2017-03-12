@@ -32,9 +32,10 @@ class App extends React.Component { // class 개념 역시 ES6 에 새로 도입
 
                     <button onClick={this.say}>click</button>
                     <p style = {pStyle} >{1 == 1 ? 'True' : 'False'}</p>
+                    { /* 주석 쓰는법 */ }
                 </div>
                 // pStyle 이 p element 에 적용
-                
+
                 // If-Else 문 사용 불가
                 // JSX 안에서 사용되는 JavaScript 표현에는
                 // If-Else 문이 사용 불가
