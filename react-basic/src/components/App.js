@@ -1,4 +1,6 @@
 import React from 'react';
+import Header from './Header';
+import Content from './Content';
 
 class App extends React.Component {
     render(){
@@ -17,25 +19,12 @@ class App extends React.Component {
    작성 할 수 있음
 
    앱 규모가 커지면 유지보수가 불편함
+
+   Component들을 모듈화 하여
+   여러 파일로 분리해서
+   
+   사용하면 유지 보수가 훨씬 쉬워집
    
 */
-class Header extends React.Component {
-    render(){
-        return (
-            <h1>Header</h1>
-        );
-    }
-}
- 
-class Content extends React.Component {
-    render(){
-        return (
-            <div>
-                <h2>Content</h2>
-                <p> u4bi! </p>
-            </div>
-        );
-    }
-}
 
 export default App;
