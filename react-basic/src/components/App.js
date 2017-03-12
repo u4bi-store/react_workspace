@@ -10,7 +10,15 @@ class App extends React.Component { // class 개념 역시 ES6 에 새로 도입
                  // 따옴표같은건 없다.
                  // React JSX 는 XML-like Syntax 를 native Javascript 변환해준다.
                  // ” ” 로 감싸지 않는 점 주의
-                <h1>Hello U4bi</h1>
+                <div>
+                    <h1> Hello U4bi </h1>
+                    <h2> Welcome </h2>
+                </div>
+                // 여러 Element 를 렌더링 해야 할 때,
+                // 그 element들을 필수적으로 container element 안에
+                // 포함시켜줘야 함
+                
+                // 즉  div element 를 wrapper 로 사용하면 됨
         );
         
         // 이전에는 개발자들이 .jsx 확장자를 사용하였지만
