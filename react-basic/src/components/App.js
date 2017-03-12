@@ -2,8 +2,34 @@ import React from 'react';
 import Header from './Header';
 import Content from './Content';
 import StateExample from './StateExample';
+import RandomNumber from './RandomNumber'; /* RandomNumber.js를 import함 */
+/* 이제 parent 컴포넌트인 App 컴포넌트에서
+   RandomNumber 컴포넌트를 사용해보기
+*/
 
 class App extends React.Component {
+
+    constructor(props){
+        super(props);
+
+        this.state = { /* 초기 state를 설정 */
+            value: Math.round(Math.random()*100)
+        };
+
+        this.updateValue = this.updateValue.bind(this);
+        /* updateValue() 메서드에서
+           this.setState 에 접근 할 수 있도록 bind함 */
+    }
+ 
+    updateValue(randomValue){
+        console.log('randomValue : ', randomValue);
+        this.setState({
+            value: randomValue
+        });
+        /* state를 변경 할 때는
+           setState({key: value}) 메서드를 사용함 */
+    }
+
     render(){
         return  (
             <div>  {/* <Header/> 와 <Content/> 는 만들 컴포넌트
@@ -29,6 +55,12 @@ class App extends React.Component {
 
                          */}
                 <StateExample/>
+                <RandomNumber number={this.state.value}
+                              onUpdate={this.updateValue} />
+                { /* RandomNumber 컴포넌트를 사용함
+                     onUpdate
+                */}
+
             </div>
         );
     }
