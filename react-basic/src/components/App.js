@@ -19,7 +19,7 @@ class App extends React.Component {
                             해더에 title이란 프로퍼티로 정의하여 넘김
 
                             아래도 마찬가지
-                            
+
                             콘텐츠에는
                                 index.js에서 넘어온 두 프로퍼티를
 
@@ -43,5 +43,11 @@ class App extends React.Component {
    사용하면 유지 보수가 훨씬 쉬워집
    
 */
+
+App.defaultProps = {
+    headerTitle: 'u4bi not header title',
+    contentTitle: 'u4bi not content title',
+    contentBody: 'u4bi not content body'
+};
 
 export default App;
